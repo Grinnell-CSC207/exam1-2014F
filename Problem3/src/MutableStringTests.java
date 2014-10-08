@@ -52,7 +52,7 @@ public class MutableStringTests
   public void testRemove(String str)
   {
     Random gen = new Random();
-    MutableString mut = new MutableString(str);
+    MutableString mut = new BasicMutableString(str);
     StringBuffer buf = new StringBuffer(str);
     int len;
     while ((len = buf.length()) != 0)
@@ -82,7 +82,7 @@ public class MutableStringTests
   {
     Random gen = new Random();
     String tmp = str;
-    MutableString mut = new MutableString(str);
+    MutableString mut = new BasicMutableString(str);
 
     for (int i = 0; i < 10; i++)
       {
@@ -121,10 +121,10 @@ public class MutableStringTests
   @Test
   public void test()
   {
-    checkChars("string a", "a", new MutableString("a"));
-    checkChars("string ab", "ab", new MutableString("ab"));
-    checkChars("empty/1", "", new MutableString(""));
-    checkChars("empty/2", "", new MutableString());
+    checkChars("string a", "a", new BasicMutableString("a"));
+    checkChars("string ab", "ab", new BasicMutableString("ab"));
+    checkChars("empty/1", "", new BasicMutableString(""));
+    checkChars("empty/2", "", new BasicMutableString());
   } // test()
 
   /**
@@ -133,7 +133,7 @@ public class MutableStringTests
   @Test
   public void testAppend()
   {
-    MutableString mut = new MutableString();
+    MutableString mut = new BasicMutableString();
     assertEquals("Empty string", "", mut.toString());
     mut.append("alpha");
     assertEquals("append(alpha)", "alpha", mut.toString());
@@ -153,7 +153,7 @@ public class MutableStringTests
   @Test
   public void testPrepend0()
   {
-    MutableString mut = new MutableString();
+    MutableString mut = new BasicMutableString();
     assertEquals("Empty string", "", mut.toString());
     mut.prepend(0,"alpha");
     assertEquals("prepend(0,alpha)", "alpha", mut.toString());
@@ -173,7 +173,7 @@ public class MutableStringTests
   @Test
   public void testPrepend()
   {
-    MutableString mut = new MutableString("alphabet");
+    MutableString mut = new BasicMutableString("alphabet");
     mut.prepend(8, "X");
     assertEquals("prepend(8,X)", "alphabetX", mut.toString());
     mut.prepend(7, "X");
@@ -193,7 +193,7 @@ public class MutableStringTests
     mut.prepend(0, "X");
     assertEquals("prepend(0,X)", "XaXlXpXhXaXbXeXtX", mut.toString());
 
-    mut = new MutableString("alphabet");
+    mut = new BasicMutableString("alphabet");
     assertEquals("alphabet", "alphabet", mut.toString());
     mut.prepend(5, "--");
     assertEquals("mut.prepend(5,--)", "alpha--bet", mut.toString());
