@@ -30,5 +30,6 @@ public class AverageExpt
     PrintWriter pen = new PrintWriter(System.out, true);
     expt(pen, new long[] { -5 });
     expt(pen, new long[] { 1,2,3,4,5 });
+    pen.close();
   } // main(String[])
 } // class AverageExpt
