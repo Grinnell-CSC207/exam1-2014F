@@ -16,9 +16,10 @@ public class Experiments
   // +---------+
 
   /**
-   * Sam's easy comparator.  It's type unsafe, but I don't care.
+   * Sam's easy comparator.  It's type unsafe and uses raw types, but I 
+   * don't care.
    */
-  @SuppressWarnings("unchecked")
+  @SuppressWarnings({ "unchecked", "rawtypes" })
   public static Comparator<Comparable> ezcompare = 
     (left,right) -> left.compareTo(right);
 
@@ -34,8 +35,8 @@ public class Experiments
   /**
    * Run a single experiment: Psueodsort using a particular element.
    */
-  public static void experiment(PrintWriter pen, Comparable val, 
-      Comparable[] values)
+  public static void experiment(PrintWriter pen, Comparable<?> val, 
+      Comparable<?>[] values)
   {
     // Print original info
     pen.println("--------------------------------------------------");
@@ -84,7 +85,7 @@ public class Experiments
    * pick a random element of the vector and pseudosort with that element.
    */
   public static void randomizedExperiments(int n, PrintWriter pen, 
-      Comparable[] values)
+      Comparable<?>[] values)
   {
     for (int i = 0; i < n; i++)
       {
@@ -97,7 +98,7 @@ public class Experiments
   /**
    * Shuffle the elements of an array.
    */
-  public static void shuffle(Comparable[] values)
+  public static void shuffle(Comparable<?>[] values)
   {
     for (int i = 0; i < values.length; i++)
       {
@@ -108,9 +109,9 @@ public class Experiments
   /**
    * Swap two elements of an array.
    */
-  public static void swap(Comparable[] values, int i, int j)
+  public static void swap(Comparable<?>[] values, int i, int j)
   {
-    Comparable tmp = values[i];
+    Comparable<?> tmp = values[i];
     values[i] = values[j];
     values[j] = tmp;
   } // swap(Comparable[], int, int)
