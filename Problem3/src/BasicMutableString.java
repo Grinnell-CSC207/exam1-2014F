@@ -110,7 +110,7 @@ public class BasicMutableString
    */
   public String toString()
   {
-    return new String(this.contents, 0, this.size);  // STUB
+    return new String(this.contents, 0, this.size);
   } // toString()
 
   // +-----------+---------------------------------------------------------
