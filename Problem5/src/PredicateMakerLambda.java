@@ -11,18 +11,6 @@ public class PredicateMakerLambda<T>
   implements PredicateMaker<T>
 {
   /**
-   * The one version of this class you are allowed to use.
-   */
-  public PredicateMaker<T> FACTORY = new PredicateMakerLambda<T>();
-
-  /**
-   * Construct.
-   */
-  private PredicateMakerLambda() 
-  { 
-  } // PredicateMakerLambda()
-
-  /**
    * Create a new predicate that holds only when all of the values
    * in preds hold.
    */

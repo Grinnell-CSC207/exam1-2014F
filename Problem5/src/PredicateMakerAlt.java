@@ -12,18 +12,6 @@ public class PredicateMakerAlt<T>
   implements PredicateMaker<T>
 {
   /**
-   * The one version of this class you are allowed to use.
-   */
-  public PredicateMaker<T> FACTORY = new PredicateMakerAlt<T>();
-
-  /**
-   * Construct.
-   */
-  private PredicateMakerAlt() 
-  { 
-  } // PredicateMakerAlt()
-
-  /**
    * Create a new predicate that holds only when all of the values
    * in preds hold.
    */

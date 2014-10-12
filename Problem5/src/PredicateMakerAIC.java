@@ -11,18 +11,6 @@ public class PredicateMakerAIC<T>
   implements PredicateMaker<T>
 {
   /**
-   * The one version of this class you are allowed to use.
-   */
-  public PredicateMaker<T> FACTORY = new PredicateMakerAIC<T>();
-
-  /**
-   * Construct.
-   */
-  private PredicateMakerAIC() 
-  { 
-  } // PredicateMakerAIC()
-
-  /**
    * Create a new predicate that holds only when all of the values
    * in preds hold.
    */
