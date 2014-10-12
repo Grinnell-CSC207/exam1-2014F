@@ -73,7 +73,7 @@ public class BasicMutableString
   // +---------+
 
   /**
-   * Compute the first reaonable capacity larger than mincap.
+   * Compute the first reasonable capacity larger than mincap.
    */
   int computeNeededCapacity(int mincap)
   {
