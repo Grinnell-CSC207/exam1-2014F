@@ -18,7 +18,7 @@ public class Utils
    * @post
    *   No values have been added to values or removed from values.
    * @post
-   *   All elements with index less than boundaries[0] are smaller thna
+   *   All elements with index less than boundaries[0] are smaller than
    *   val.  All elements with index greater than or equal to boundaries[0] 
    *   and less than boundaries[1] are equal to val.  All elements with
    *   index greater than or equal to boundaries[1] are larger than val.
